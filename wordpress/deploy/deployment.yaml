@@ -34,7 +34,7 @@ spec:
           image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE} 
           env:
           - name: WORDPRESS_DB_HOST
-            value: mysql
+            value: mysql-6779c5755d-djgxp
           - name: WORDPRESS_DB_PASSWORD
             valueFrom:
               secretKeyRef:
