@@ -1,4 +1,8 @@
 stages:
+- name: ConfigMap mysql
+  steps:
+  - applyYamlConfig:
+      path: ./configmap/mysql-configmap.yml
 - name: Publish image wordpress
   steps:
   - publishImageConfig:

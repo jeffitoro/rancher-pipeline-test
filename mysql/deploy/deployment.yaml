@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mysql-service
+  name: mysql
 spec:
   selector:
     app: mysql
@@ -37,5 +37,10 @@ spec:
               secretKeyRef:
                 name: pipeline-mysql-secret
                 key: MYSQL_ROOT_PASSWORD
+          - name: MYSQL_DATABASE # Setting Database Name from a 'ConfigMap'
+          valueFrom:
+            configMapKeyRef:
+              name: db-conf
+              key: name
           ports:
           - containerPort: 3306
