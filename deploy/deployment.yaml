@@ -1,0 +1,39 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: wordpress-service
+spec:
+  selector:
+    app: wordpress
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wordpress
+  labels:
+    app: wordpress
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wordpress
+  template:
+    metadata:
+      labels:
+        app: wordpress
+    spec:
+      imagePullSecrets:
+      - name: pipeline-docker-registry
+      containers:
+        - name: wordpress
+          image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE} 
+          env:
+          - name: PMA_ARBITRARY
+            value: "1"   
+          ports:
+          - containerPort: 80
