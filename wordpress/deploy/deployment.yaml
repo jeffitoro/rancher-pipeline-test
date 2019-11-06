@@ -33,6 +33,13 @@ spec:
         - name: wordpress
           image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE} 
           env:
+          - name: WORDPRESS_DB_HOST
+            value: mysql
+          - name: WORDPRESS_DB_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: pipeline-mysql-secret
+                key: MYSQL_ROOT_PASSWORD
           - name: PMA_ARBITRARY
             value: "1"   
           ports:
