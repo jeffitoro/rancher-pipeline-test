@@ -9,9 +9,6 @@ stages:
   steps:
   - applyYamlConfig:
       path: ./wordpress/deploy/deployment.yaml
-notification: {}
-
-stages:
 - name: Publish image mysql
   steps:
   - publishImageConfig:
