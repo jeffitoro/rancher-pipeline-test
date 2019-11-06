@@ -1,12 +1,25 @@
 stages:
-- name: Publish image
+- name: Publish image wordpress
   steps:
   - publishImageConfig:
-      dockerfilePath: ./Dockerfile
-      buildContext: .
+      dockerfilePath: ./wordpress/Dockerfile
+      buildContext: ./wordpress
       tag: wordpress:${CICD_EXECUTION_SEQUENCE}
 - name: Deploy
   steps:
   - applyYamlConfig:
-      path: ./deploy/deployment.yaml
+      path: ./wordpress/deploy/deployment.yaml
+notification: {}
+
+stages:
+- name: Publish image mysql
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./mysql/Dockerfile
+      buildContext: ./mysql
+      tag: mysql:${CICD_EXECUTION_SEQUENCE}
+- name: Deploy
+  steps:
+  - applyYamlConfig:
+      path: ./mysql/deploy/deployment.yaml
 notification: {}
