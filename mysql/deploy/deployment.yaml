@@ -38,9 +38,9 @@ spec:
                 name: pipeline-mysql-secret
                 key: MYSQL_ROOT_PASSWORD
           - name: MYSQL_DATABASE # Setting Database Name from a 'ConfigMap'
-          valueFrom:
-            configMapKeyRef:
-              name: db-conf
-              key: name
+            valueFrom:
+              configMapKeyRef:
+                name: db-conf
+                key: name
           ports:
           - containerPort: 3306
