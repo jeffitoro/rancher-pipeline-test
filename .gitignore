@@ -6,15 +6,16 @@
 # !app/wp-content/
 
 wordpress/app/wp-config.php
+wordpress/app/
 
 # ignore everything in the "app/wp-content" directory, except:
 # # "mu-plugins", "plugins", "themes" directory
-# wordpress/app/wp-admin/
-# wordpress/app/wp-includes/
-# wordpress/app/wp-content/*
-# !wordpress/app/wp-content/mu-plugins/
-# !wordpress/app/wp-content/plugins/
-# !wordpress/app/wp-content/themes/
+wordpress/app/wp-admin/
+wordpress/app/wp-includes/
+wordpress/app/wp-content/*
+!wordpress/app/wp-content/mu-plugins/
+!wordpress/app/wp-content/plugins/
+!wordpress/app/wp-content/themes/
 
 # # ignore these plugins
 wordpress/app/wp-content/plugins/hello.php
