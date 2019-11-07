@@ -15,6 +15,6 @@ RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 # COPY ./app  /var/www/html
 # ADD ./app/* /var/www/html/
 
-VOLUME [ "/var/www/html" ]
+# VOLUME [ "/var/www/html" ]
 
 EXPOSE 80
