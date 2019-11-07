@@ -14,9 +14,9 @@ RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # VOLUME [ "/var/www/html" ]
 
-# WORKDIR /wordpress/app
+# WORKDIR /app
 
-COPY ./app .
+COPY ./app/. .
 
 RUN wp --allow-root core download --force
 
