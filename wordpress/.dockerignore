@@ -1,15 +1,15 @@
-!app/wp-content/
+# !app/wp-content/
 
-app/wp-config.php
+# app/wp-config.php
 
 # ignore everything in the "app/wp-content" directory, except:
-"mu-plugins", "plugins", "themes" directory
-app/wp-admin/
-app/wp-includes/
-app/wp-content/*
-!app/wp-content/mu-plugins/
-!app/wp-content/plugins/
-!app/wp-content/themes/
+# "mu-plugins", "plugins", "themes" directory
+# app/wp-admin/
+# app/wp-includes/
+# app/wp-content/*
+# !app/wp-content/mu-plugins/
+# !app/wp-content/plugins/
+# !app/wp-content/themes/
 
 # ignore these plugins
 # app/wp-content/plugins/hello.php
@@ -18,5 +18,5 @@ app/wp-content/*
 app/wp-content/themes/twentyseventeen
 app/wp-content/themes/twentysixteen
 
-app/wp-content/themes/twentynineteen/*
-!app/wp-content/themes/twentynineteen/*.php
+# app/wp-content/themes/twentynineteen/*
+# !app/wp-content/themes/twentynineteen/*.php
