@@ -1,8 +1,8 @@
 stages:
-- name: ConfigMap mysql
-  steps:
-  - applyYamlConfig:
-      path: ./configmap/mysql-configmap.yml
+# - name: ConfigMap mysql
+#   steps:
+#   - applyYamlConfig:
+#       path: ./configmap/mysql-configmap.yml
 - name: Publish image wordpress
   steps:
   - publishImageConfig:
@@ -13,14 +13,14 @@ stages:
   steps:
   - applyYamlConfig:
       path: ./wordpress/deploy/deployment.yaml
-- name: Publish image mysql
-  steps:
-  - publishImageConfig:
-      dockerfilePath: ./mysql/Dockerfile
-      buildContext: ./mysql
-      tag: mysql:${CICD_EXECUTION_SEQUENCE}
-- name: Deploy
-  steps:
-  - applyYamlConfig:
-      path: ./mysql/deploy/deployment.yaml
+# - name: Publish image mysql
+#   steps:
+#   - publishImageConfig:
+#       dockerfilePath: ./mysql/Dockerfile
+#       buildContext: ./mysql
+#       tag: mysql:${CICD_EXECUTION_SEQUENCE}
+# - name: Deploy
+#   steps:
+#   - applyYamlConfig:
+#       path: ./mysql/deploy/deployment.yaml
 notification: {}
