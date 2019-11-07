@@ -11,7 +11,7 @@ VOLUME [ "/var/www/html" ]
 
 WORKDIR /app
 
-RUN cp -R ./* /var/www/html/
+RUN cp -R /app /var/www/html/
 
 # COPY --chown=www-data ./app /var/www/html/
 
