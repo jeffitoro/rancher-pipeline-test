@@ -17,7 +17,8 @@ RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 VOLUME [ "/var/www/html" ]
 
-COPY ./app/* /var/www/html/
+COPY ./app/ /tmp/
+RUN cp -R /tmp/etc/* /etc/ && rm -rf /tmp/etc
 
 RUN [ -d "/var/www/html/wp-admin" && ! -h "/var/www/html/wp-admin" ] && echo "Directory /var/www/html/wp-admin exists." || echo "Error: Directory /var/www/html/wp-admin exists but point to $(readlink -f /var/www/html/wp-admin)."
 
