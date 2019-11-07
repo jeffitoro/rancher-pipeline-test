@@ -20,7 +20,11 @@ wordpress/app/wp-content/*
 wordpress/app/wp-content/plugins/hello.php
 
 # ignore specific themes
-wordpress/app/wp-content/themes/twenty*/
+wordpress/app/wp-content/themes/twentyseventeen
+wordpress/app/wp-content/themes/twentysixteen
+
+wordpress/app/wp-content/themes/twentynineteen/*
+!wordpress/app/wp-content/themes/twentynineteen/*.php
 
 # ignore node dependency directories
 node_modules/
