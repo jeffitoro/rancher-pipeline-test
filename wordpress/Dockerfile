@@ -11,6 +11,6 @@ VOLUME [ "/var/www/html" ]
 
 WORKDIR /app
 
-COPY --chown=www-data . /var/www/html/
+COPY --chown=www-data ./app /var/www/html/
 
 EXPOSE 80
