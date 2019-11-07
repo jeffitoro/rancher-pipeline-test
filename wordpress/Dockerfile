@@ -12,9 +12,11 @@ RUN chmod +x /bin/wp-cli.phar /bin/wp
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-WORKDIR /app
+# VOLUME [ "/var/www/html" ]
 
-COPY . .
+# WORKDIR /wordpress/app
+
+COPY ./app .
 
 RUN wp --allow-root core download --force
 
