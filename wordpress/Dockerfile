@@ -7,7 +7,7 @@ COPY wp-su.sh /bin/wp
 
 RUN chmod +x /bin/wp-cli.phar /bin/wp && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-COPY --chown=www-data ./app/wp-content /var/www/html/wp-content
+COPY --chown=www-data ./app/wp-content /var/www/html/wp-content/
 
 VOLUME [ "/var/www/html" ]
 
