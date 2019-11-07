@@ -9,8 +9,8 @@ RUN chmod +x /bin/wp-cli.phar /bin/wp && apt-get clean && rm -rf /var/lib/apt/li
 
 VOLUME [ "/var/www/html" ]
 
-WORKDIR /wordpress/app/wp-content
+WORKDIR /wordpress/app
 
-COPY --chown=www-data . /var/www/html/wp-content/
+COPY --chown=www-data . /var/www/html/
 
 EXPOSE 80
