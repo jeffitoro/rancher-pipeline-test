@@ -10,8 +10,8 @@ RUN chmod +x /bin/wp-cli.phar /bin/wp && apt-get clean && rm -rf /var/lib/apt/li
 VOLUME [ "/var/www/html" ]
 
 WORKDIR /app
-
-RUN cp -R /app /var/www/html/
+USER root
+RUN cp -R /app/* /var/www/html/
 
 # COPY --chown=www-data ./app /var/www/html/
 
