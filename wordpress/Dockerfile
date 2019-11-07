@@ -12,7 +12,7 @@ RUN chmod +x /bin/wp-cli.phar /bin/wp
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# WORKDIR /app
+WORKDIR /app
 
 COPY . .
 
