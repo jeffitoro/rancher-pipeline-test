@@ -11,6 +11,6 @@ VOLUME [ "/var/www/html" ]
 
 WORKDIR /wordpress/app/
 
-COPY --chown=www-data wp-content /var/www/html/wp-content/
+COPY --chown=www-data ./wp-content /var/www/html/wp-content/
 
 EXPOSE 80
