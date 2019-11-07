@@ -9,7 +9,7 @@ RUN chmod +x /bin/wp-cli.phar /bin/wp && apt-get clean && rm -rf /var/lib/apt/li
 
 VOLUME [ "/var/www/html" ]
 
-WORKDIR /wordpress/app/
+WORKDIR /app
 
 COPY --chown=www-data . /var/www/html/
 
