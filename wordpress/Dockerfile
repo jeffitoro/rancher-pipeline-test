@@ -10,6 +10,6 @@ RUN chmod +x /bin/wp-cli.phar /bin/wp && apt-get clean && rm -rf /var/lib/apt/li
 VOLUME [ "/var/www/html" ]
 
 WORKDIR /app
-COPY --chown=www-data:www-data ./app/ /var/www/html/
+COPY --chown=www-data:www-data ./app/. /var/www/html/
 
 EXPOSE 80

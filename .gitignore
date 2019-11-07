@@ -5,7 +5,7 @@
 # ignore everything in the root except the "wordpress/app/wp-content" directory.
 # !app/wp-content/
 
-# wordpress/app/wp-config.php
+wordpress/app/wp-config.php
 
 # ignore everything in the "app/wp-content" directory, except:
 # # "mu-plugins", "plugins", "themes" directory
