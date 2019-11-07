@@ -13,6 +13,6 @@ RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # COPY ./app  /var/www/html
-COPY ./app /var/www/html
+ADD ./app/* /var/www/html/
 
 EXPOSE 80
