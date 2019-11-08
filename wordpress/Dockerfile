@@ -21,8 +21,6 @@ RUN wp --allow-root core download --force
 
 # COPY --from=wordpress ./ /var/www/html/
 
-# CMD cd ./app && wp --allow-root core download
-
 
 # RUN chmod +x /bin/wp-cli.phar /bin/wp && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 #     --dbhost=${MYSQL_HOST:-db}:${MYSQL_PORT:-3306} \
