@@ -13,8 +13,9 @@ RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # WORKDIR /app
+# USER root
 
-COPY . .
+COPY --chown=www-data:www-data ./app/. .
 
 RUN wp --allow-root core download --force
 
