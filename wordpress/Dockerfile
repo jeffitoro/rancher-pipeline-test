@@ -14,11 +14,9 @@ RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # WORKDIR /wordpress/app
 # USER root
-VOLUME [ "/data" ]
-VOLUME [ "/wordpress/app" ]
 
-CMD cd ./app
-COPY --chown=www-data:www-data ./ .
+# CMD cd ./app
+COPY --chown=www-data:www-data . .
 
 # RUN wp --allow-root core download --force
 

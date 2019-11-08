@@ -2,30 +2,30 @@
 .history
 .vscode
 
-# ignore everything in the root except the "wordpress/app/wp-content" directory.
-# !app/wp-content/
+# ignore everything in the root except the "wordpress/wp-content" directory.
+# /wp-content/
 
-wordpress/app/wp-config.php
-wordpress/app/
+wordpress/wp-config.php
+wordpress/
 
-# ignore everything in the "app/wp-content" directory, except:
+# ignore everything in the /wp-content" directory, except:
 # # "mu-plugins", "plugins", "themes" directory
-wordpress/app/wp-admin/
-wordpress/app/wp-includes/
-wordpress/app/wp-content/*
-!wordpress/app/wp-content/mu-plugins/
-!wordpress/app/wp-content/plugins/
-!wordpress/app/wp-content/themes/
+wordpress/wp-admin/
+wordpress/wp-includes/
+wordpress/wp-content/*
+!wordpress/wp-content/mu-plugins/
+!wordpress/wp-content/plugins/
+!wordpress/wp-content/themes/
 
 # # ignore these plugins
-wordpress/app/wp-content/plugins/hello.php
+wordpress/wp-content/plugins/hello.php
 
 # # ignore specific themes
-wordpress/app/wp-content/themes/twentyseventeen
-wordpress/app/wp-content/themes/twentysixteen
+wordpress/wp-content/themes/twentyseventeen
+wordpress/wp-content/themes/twentysixteen
 
-# wordpress/app/wp-content/themes/twentynineteen/*
-# !wordpress/app/wp-content/themes/twentynineteen/*.php
+# wordpress/wp-content/themes/twentynineteen/*
+# !wordpress/wp-content/themes/twentynineteen/*.php
 
 # # ignore node dependency directories
 # node_modules/
