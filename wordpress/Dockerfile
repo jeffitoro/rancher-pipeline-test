@@ -12,7 +12,7 @@ RUN chmod +x /bin/wp-cli.phar /bin/wp
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-WORKDIR /wordpress/app
+# WORKDIR /wordpress/app
 # USER root
 
 COPY --chown=www-data:www-data . .
