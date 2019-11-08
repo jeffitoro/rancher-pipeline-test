@@ -17,7 +17,7 @@ RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 COPY --chown=www-data:www-data ./app/. .
 
-RUN wp --allow-root core download --force
+# RUN wp --allow-root core download --force
 
 
 # COPY --from=wordpress ./ /var/www/html/
