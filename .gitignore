@@ -6,13 +6,17 @@
 # /wp-content/
 
 wordpress/wp-config.php
-wordpress/
+wordpress/*
+!wordpress/wp-content/
+
+!wordpress/Dockerfile
+!wordpress/deploy
 
 # ignore everything in the /wp-content" directory, except:
 # # "mu-plugins", "plugins", "themes" directory
 wordpress/wp-admin/
 wordpress/wp-includes/
-wordpress/wp-content/*
+# wordpress/wp-content/*
 !wordpress/wp-content/mu-plugins/
 !wordpress/wp-content/plugins/
 !wordpress/wp-content/themes/
@@ -25,7 +29,7 @@ wordpress/wp-content/themes/twentyseventeen
 wordpress/wp-content/themes/twentysixteen
 
 # wordpress/wp-content/themes/twentynineteen/*
-# !wordpress/wp-content/themes/twentynineteen/*.php
+!wordpress/wp-content/themes/twentynineteen
 
 # # ignore node dependency directories
 # node_modules/
@@ -34,5 +38,5 @@ wordpress/wp-content/themes/twentysixteen
 # *.log
 # *.sql
 # *.sqlite
-
+index.php
 data/
